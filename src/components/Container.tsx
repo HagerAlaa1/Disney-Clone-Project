@@ -1,13 +1,14 @@
 import React from 'react'
 
 type containerProps = {
-    children: React.ReactNode
+    children: React.ReactNode,
+    className?: string
 }
 
-function Container({children}: containerProps) {
+function Container(props: containerProps) {
   return (
     <div className='mx-6.5'>
-      {children}
+      {props.children}
     </div>
   )
 }

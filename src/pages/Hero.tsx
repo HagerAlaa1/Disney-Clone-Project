@@ -17,8 +17,8 @@ function Hero() {
             New Originals, blockbusters and series
           </h1>
         </div>
-        <div className="w-full sm:w-60 mt-6 ">
-          <Button className="w-full h-12 font-semibold leading-5 flex justify-center gap-2 ">
+        <div className="w-full sm:w-60 mt-6 hover:scale-110 transition-transform delay-100 duration-300">
+          <Button className="w-full h-12 font-semibold leading-5 flex justify-center gap-2">
             <span>Get Started</span>
             <ChevronRight />
           </Button>

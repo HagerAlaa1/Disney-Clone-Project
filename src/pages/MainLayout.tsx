@@ -1,4 +1,5 @@
 import Container from "../components/Container";
+import Features from "./Features";
 import Hero from "./Hero";
 import Navbar from "./Navbar";
 
@@ -10,6 +11,11 @@ function MainLayout() {
           <Navbar />
           <Hero />
         </Container>
+      </section>
+      <section>
+        {/* <Container> */}
+          <Features />
+        {/* </Container> */}
       </section>
     </main>
   );

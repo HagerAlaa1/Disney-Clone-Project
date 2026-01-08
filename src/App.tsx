@@ -7,13 +7,13 @@ import MainLayout from "./pages/MainLayout";
 function App() {
   return (
     <>
-      <Routes>
-        <Route path="/login" element={<LogIn />} />
-        <Route path="/" element={<MainLayout />}>
-          <Route path="/home" element={<Hero />} />
-          <Route path="/features" element={<Features />} />
-        </Route>
-      </Routes>
+        <Routes>
+          <Route path="/login" element={<LogIn />} />
+          <Route path="/" element={<MainLayout />}>
+            <Route path="/home" element={<Hero />} />
+            <Route path="/features" element={<Features />} />
+          </Route>
+        </Routes>
       {/* <h1>Hello World, that's a Disney Plus Clone! 🚀</h1> */}
     </>
   );
