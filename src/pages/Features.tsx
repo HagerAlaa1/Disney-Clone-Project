@@ -1,4 +1,4 @@
-import Cards from "../components/Cards";
+import {FeatureCard} from "../components/Cards";
 
 const features = [
   {
@@ -22,9 +22,9 @@ function Features() {
   return (
     <div>
       <div className="w-full h-px mx-auto p-0.5 bg-[linear-gradient(to_left,#000000,#02132f,#042050,#082e71,#0f3983,#4c83e5,#4c83e5,#0f3983,#082e71,#042050,#02132f,#000000)]"></div>
-      <section className="md:grid md:grid-cols-3 ">
+      <section className="md:grid lg:grid-cols-3">
         {features.map((feature) => (
-          <Cards
+          <FeatureCard
             key={feature.title}
             image={feature.image}
             title={feature.title}

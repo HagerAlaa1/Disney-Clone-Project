@@ -1,6 +1,7 @@
 import Container from "../components/Container";
 import Features from "./Features";
 import Hero from "./Hero";
+import HeroBanner from "./HeroBanner";
 import Navbar from "./Navbar";
 
 function MainLayout() {
@@ -15,6 +16,7 @@ function MainLayout() {
       <section>
         {/* <Container> */}
           <Features />
+          <HeroBanner/>
         {/* </Container> */}
       </section>
     </main>
