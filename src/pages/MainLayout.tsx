@@ -3,6 +3,9 @@ import Features from "./Features";
 import Hero from "./Hero";
 import HeroBanner from "./HeroBanner";
 import Navbar from "./Navbar";
+import Devices from "./Devices";
+import FAQ from "./FAQ";
+import Footer from "./Footer";
 
 function MainLayout() {
   return (
@@ -15,8 +18,13 @@ function MainLayout() {
       </section>
       <section>
         {/* <Container> */}
-          <Features />
-          <HeroBanner/>
+        <Features />
+        <div className="bg-[linear-gradient(180deg,#222530,#0f1014_10.33%)]">
+          <HeroBanner />
+          <Devices />
+          <FAQ />
+        </div>
+        <Footer/>
         {/* </Container> */}
       </section>
     </main>

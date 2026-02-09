@@ -46,7 +46,7 @@ const bannerFeatures = [
 function HeroBanner() {
   return (
     <>
-      <section className="bg-[linear-gradient(180deg,#222530,#0f1014_10.33%)] mb-10">
+      <section>
         {bannerFeatures.map((feature) => (
           <BannerCard
             key={feature.title}

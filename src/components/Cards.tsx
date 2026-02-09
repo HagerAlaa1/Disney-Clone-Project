@@ -15,7 +15,6 @@ export function FeatureCard({
   description,
 }: FeaturesProps) {
   return (
-
     <section
       className={`${className} first:pt-10 md:first:pt-0 last:pb-10 md:last:pb-0 bg-[#0F1014]`}
     >
@@ -75,27 +74,29 @@ export function BannerCard({
   );
 }
 
-export function Devices({
+export function DevicesCard({
   className = " ",
   image,
   title,
-  description,
+  items,
 }: FeaturesProps) {
   return (
-    <section
-      className={`${className} flex justify-center items-center text-center flex-col`}
-    >
-      <Container>
-        <div className="text-center m-auto text-[20px] font-semibold tracking-[-0.2px] leading-7 mt-12">
-          <h2 className="text-[#e1e6f0]">Compatible devices</h2>
-        </div>
-        <div>
-          <div></div>
-        </div>
-      </Container>
-    </section>
+      <section
+        className={`${className} flex justify-start items-center text-center flex-col mx-auto mt-12 md:mt-0 first:mt-0`}
+      >
+        <Container>
+          <div className={`flex justify-center items-center flex-col gap-2`}>
+            <div className="h-20 md:h-30 w-20 md:w-30">
+              <img src={image} alt={title} className="w-full h-full object-contain"/>
+            </div>
+            <span className="my-5">
+              <h3 className="text-[#e1e6f0] text-[16px] md:text-[18px] font-semibold tracking-normal leading-5 md:leading-6">{title}</h3>
+            </span>
+            <div>
+              <h3 className="text-[#8f98b2] text-[14px] md:text-[18px] md:font-normal leading-5 md:leading-8">{items}</h3>
+            </div>
+          </div>
+        </Container>
+      </section>
   );
 }
-
-//flex flex-col justify-center items-center gap-2 mx-3 pb-10
-//flex flex-col justify-center items-center  first:pt-10 md:pt-0 last:pb-5 md:pb-0 py-20
