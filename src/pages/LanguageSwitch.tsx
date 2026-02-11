@@ -27,10 +27,10 @@ function LanguageSwitch() {
         className={`flex items-center md:min-w-50 rounded-md font-bold bg-[#0F1014] transition cursor-pointer ${
           lang === "ar" ? "gap-4 px-2 py-1" : "gap-2 px-3 py-2"
         }
-        ${lang === "ar" ? "text-[20px]" : "text-[14px]"}
+        ${lang === "ar" ? "text-md" : "text-[14px]"}
         `}
       >
-        <span className={`hidden md:block mr-3`}>{t("choose")}</span>
+        <span className={`hidden md:block mr-3`}>{t("hero.choose")}</span>
         <span>{languages.find((l) => l.value === lang)?.text}</span>
         <ChevronDown
           className={`w-4 h-4 transition-transform ${

@@ -1,5 +1,23 @@
 {
-  "choose": "Choose language",
-  "log": "Log in",
-  "start button": "Get Started"
+  "hero": {
+    "choose": "Choose language",
+    "log": "Log in",
+    "hero title": "New Originals, blockbusters and series",
+    "start button": "Get Started",
+    "subscribe": "Already a subscriber ? Download the App"
+  },
+  "features": [
+    {
+      "title": "Endless entertainment",
+      "description": "Explore thousands of hours of TV series, movies and originals."
+    },
+    {
+      "title": "Available on your favourite devices",
+      "description": "Stream on up to 4 screens at once on compatible devices."
+    },
+    {
+      "title": "Easy-to-use parental controls",
+      "description": "Keep your family safe with our intuitive parental controls."
+    }
+  ]
 }
