@@ -8,7 +8,7 @@ const languages = [
 ];
 
 function LanguageSwitch() {
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation("common");
   const [open, setOpen] = useState(false);
   const [lang, setLang] = useState(i18n.language || "en");
 
@@ -24,10 +24,10 @@ function LanguageSwitch() {
       {/* Button */}
       <button
         onClick={() => setOpen((p) => !p)}
-        className={`flex items-center px-3 py-2 md:min-w-70 rounded-md font-bold bg-[#0F1014] transition cursor-pointer ${
-          lang === "ar" ? "gap-4" : "gap-2"
+        className={`flex items-center md:min-w-50 rounded-md font-bold bg-[#0F1014] transition cursor-pointer ${
+          lang === "ar" ? "gap-4 px-2 py-1" : "gap-2 px-3 py-2"
         }
-        ${lang === "ar" ? "text-[20px]" : ""}
+        ${lang === "ar" ? "text-[20px]" : "text-[14px]"}
         `}
       >
         <span className={`hidden md:block mr-3`}>{t("choose")}</span>

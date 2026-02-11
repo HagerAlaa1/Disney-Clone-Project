@@ -3,11 +3,6 @@ import HttpBackend from "i18next-http-backend";
 import LanguageDetector from "i18next-browser-languagedetector";
 import { initReactI18next } from "react-i18next";
 
-const apiKey = import.meta.env.VITE_I18NEXUS_API_KEY;
-const baseUrl = import.meta.env.VITE_I18NEXUS_BASE_URL;
-
-const loadPath = `${baseUrl}/{{lng}}/default.json?api_key=${apiKey}`;
-
 i18next
   .use(HttpBackend)
   .use(LanguageDetector)
@@ -16,13 +11,13 @@ i18next
     // The default language
     fallbackLng: "en",
 
-    ns: ["default"],
-    defaultNS: "default",
+    ns: ["common"],
+    defaultNS: "common",
 
     // Tt shows the supported languages
     supportedLngs: ["en", "ar"],
     backend: {
-      loadPath,
+      loadPath: "/locales/{{lng}}/{{ns}}.json",
     },
     interpolation: {
       escapeValue: false,

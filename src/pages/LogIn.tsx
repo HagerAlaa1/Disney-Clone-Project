@@ -1,9 +1,12 @@
+import { useTranslation } from 'react-i18next'
 import Button from '../components/Button'
 
 function LogIn() {
+  const { t, i18n } = useTranslation("common");
+  const currentLang = i18n.language
   return (
-    <Button className='h-10 md:text-md w-15 md:w-20'>
-      Log In
+    <Button className={`${currentLang === "ar" ? " md:text-md text-[20px] px-2 py-1" : "px-3 py-2 md:text-md text-[14px] "}`}>
+      <span>{t("log")}</span>
     </Button>
   )
 }
