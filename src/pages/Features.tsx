@@ -12,11 +12,6 @@ function Features() {
     title: string;
     description: string;
   }>;
-  const featuresWithImages = features.map((f, i) => ({
-    image: featuresImages[i],
-    title: f.title,
-    description: f.description,
-  }));
 
   return (
     <div>

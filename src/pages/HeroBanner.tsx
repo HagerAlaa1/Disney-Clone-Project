@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { BannerCard } from "../components/Cards";
 
 const bannerFeatures = [
@@ -8,10 +9,8 @@ const bannerFeatures = [
     image: "/public/images/Stories you'd expect + Stories you wouldn't.avif",
   },
   {
-    title: "Exclusive originals",
-    description:
-      "Movies, series and documentaries you can't see anywhere else,  from the world’s greatest storytellers.",
-    // image: "/public/images/Exclusive originals.avif",
+    titleKey: "heroBanner.title",
+    descriptionKey: "heroBanner.description",
     childs: [
       {
         image: "/public/images/1.jpeg",
@@ -43,15 +42,17 @@ const bannerFeatures = [
     ],
   },
 ];
+
 function HeroBanner() {
+  const { t } = useTranslation("common");
   return (
     <>
       <section>
-        {bannerFeatures.map((feature) => (
+        {bannerFeatures.map((feature, i) => (
           <BannerCard
-            key={feature.title}
-            title={feature.title}
-            description={feature.description}
+            key={i}
+            title={feature.titleKey ? t(feature.titleKey) : feature.title}
+            description={feature.descriptionKey ? t(feature.descriptionKey) : feature.description}
             image={feature.image}
             items={
               feature?.childs?.length
@@ -65,9 +66,9 @@ function HeroBanner() {
                       }`}
                     >
                       <img
-                      height={400}
-                      width={400}
-                      className="object-cover rounded-xl cursor-pointer"
+                        height={400}
+                        width={400}
+                        className="object-cover rounded-xl cursor-pointer"
                         src={child.image}
                         alt={feature.title}
                       />
@@ -83,5 +84,3 @@ function HeroBanner() {
 }
 
 export default HeroBanner;
-
-//bg-[linear-gradient(180deg, #16181f, #0f1014 33.33%)]
