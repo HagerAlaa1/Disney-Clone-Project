@@ -1,10 +1,11 @@
+import type React from "react";
 import Container from "./Container";
 
 interface FeaturesProps {
   className?: string;
   title?: string;
   description?: string;
-  image?: string;
+  image?: string ;
   items?: React.ReactNode;
 }
 
@@ -89,7 +90,7 @@ export function DevicesCard({
             <div className="h-20 md:h-30 w-20 md:w-30">
               <img src={image} alt={title} className="w-full h-full object-contain"/>
             </div>
-            <span className="my-5">
+            <span className={`my-2`}>
               <h3 className="text-[#e1e6f0] text-[16px] md:text-[18px] font-semibold tracking-normal leading-5 md:leading-6">{title}</h3>
             </span>
             <div>

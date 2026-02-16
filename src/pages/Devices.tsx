@@ -1,53 +1,35 @@
+import { useTranslation } from "react-i18next";
 import { DevicesCard } from "../components/Cards";
 
-const devices = [
-  {
-    image: "/public/images/tv.webp",
-    title: "TV",
-    childs: [
-      { items: "Amazon Fire TV" },
-      { items: "Android TV" },
-      { items: "Apple TV" },
-      { items: "Chromecast" },
-      { items: "LG TV" },
-      { items: "Samsung" },
-    ],
-  },
-  {
-    image: "/public/images/computer.webp",
-    title: "Computer",
-    childs: [
-      { items: "Chrome OS" },
-      { items: "MacOS" },
-      { items: "Windows PC" },
-    ],
-  },
-  {
-    image: "/public/images/mobile.webp",
-    title: "Mobile & Tablet",
-    childs: [
-      { items: "Android Phones & Tablets" },
-      { items: "iPhone and iPad" },
-    ],
-  },
+const devicesImages = [
+  "/public/images/tv.webp",
+  "/public/images/computer.webp",
+  "/public/images/mobile.webp",
 ];
 function Devices() {
+  const { t } = useTranslation("common");
+  const devices = t("devices.items", { returnObjects: true }) as Array<{
+    title: string;
+    list: string[];
+  }>;
   return (
     <>
       <section className=" mt-20">
         <div className="text-center H2banner font-semibold tracking-[-0.2px] leading-7 ">
-          <h2 className="text-[#e1e6f0]">Compatible devices</h2>
+          <h2 className="text-[#e1e6f0]">{t("devices.title")}</h2>
         </div>
         <div className="grid gap-10 md:gap-0 md:grid-cols-3 py-12 px-12">
-          {devices.map((device) => (
+          {devices.map((device, i) => (
             <DevicesCard
-              key={device.title}
-              image={device.image}
+              key={i}
+              image={devicesImages[i]}
               title={device.title}
               items={
                 <ul>
-                  {device.childs.map((child) => (
-                    <li key={child.items} className="flex justify-center pb-1">{child.items}</li>
+                  {device.list.map((child, i) => (
+                    <li key={i} className="flex justify-center pb-1">
+                      {child}
+                    </li>
                   ))}
                 </ul>
               }

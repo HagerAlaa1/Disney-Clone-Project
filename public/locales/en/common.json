@@ -20,8 +20,38 @@
       "description": "Keep your family safe with our intuitive parental controls."
     }
   ],
-  "hero banner": {
-    "title": "Exclusive originals",
-    "description": "Movies, series and documentaries you can't see anywhere else,  from the world’s greatest storytellers."
+  "heroBanner": [
+    {
+      "title": "Stories you'd expect + Stories you wouldn't",
+      "description": "Discover the streaming home of Disney, Pixar, Marvel, Star Wars, National Geographic and entertainment with Star on Disney+."
+    },
+    {
+      "title": "Exclusive originals",
+      "description": "Movies, series and documentaries you can't see anywhere else,  from the world’s greatest storytellers."
+    }
+  ],
+  "devices": {
+    "title": "Compatible devices",
+    "items": [
+      {
+        "title": "TV",
+        "list": [
+          "Android TV",
+          "Apple TV",
+          "LG TV",
+          "Amazon Fire TV",
+          "Chromecast",
+          "Samsung"
+        ]
+      },
+      {
+        "title": "Computer",
+        "list": ["Chrome OS", "MacOS", "Windows PC"]
+      },
+      {
+        "title": "Mobile & Tablet",
+        "list": ["Android Phones & Tablets", "iPhone and iPad"]
+      }
+    ]
   }
 }
