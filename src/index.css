@@ -23,6 +23,10 @@ body {
 a {
   text-decoration: none;
   color: #8f98b2;
+  cursor: pointer;
+}
+button {
+  cursor: pointer;
 }
 
 :root {

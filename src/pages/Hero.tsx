@@ -32,7 +32,7 @@ function Hero() {
           <a href="#" target="_blank">
             <button className="px-6 sm:px-60 lg:px-95">
               <span
-                className={`${currentLang === "ar" ? "text-[14px]" : "text-[12px]"} text-white font-semibold`}
+                className={`${currentLang === "ar" ? "text-[14px]" : "text-[12px]"} text-white font-semibold `}
               >
                 {t("hero.subscribe")}
               </span>
