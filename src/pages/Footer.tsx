@@ -153,8 +153,8 @@ function Footer() {
               </ul>
             </div>
           ))}
-          {socialLinks.map((item, index) => (
-            <div key={index} className="pt-5 md:pt-0">
+          {socialLinks.map((item, i) => (
+            <div key={i} className="pt-5 md:pt-0">
               {item.title && (
                 <h3 className="text-[12px] lg:text-[16px] font-medium leading-4.5 lg:leading-6">
                   {item.title}
@@ -162,7 +162,7 @@ function Footer() {
               )}
               <div className="flex flex-wrap justify-between items-center gap-6 mt-3 mb-6">
                 {item.links.map((img) => (
-                  <a href={img.url} target="_blank" rel="noopener noreferrer">
+                  <a key={img.name} href={img.url} target="_blank" rel="noopener noreferrer">
                     <img
                       src={img.image}
                       alt={img.name}
@@ -181,9 +181,9 @@ function Footer() {
               Management LLC.
             </p>
             <ul className="flex gap-3 flex-row flex-wrap mt-2 mb-6">
-              {copyRightLinks.map((link, i) => (
+              {copyRightLinks.map((link, j) => (
                 <li
-                  key={i}
+                  key={j}
                   className="md:text-[12px] lg:text-[14px] md:leading-4.5 lg:leading-5"
                 >
                   {link.url ? (

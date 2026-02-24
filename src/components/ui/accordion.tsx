@@ -63,19 +63,26 @@ function AccordionTrigger({
     </AccordionPrimitive.Header>
   );
 }
-
+interface AccordionContentProps extends React.ComponentProps<typeof AccordionPrimitive.Content> {
+  isSecondLast?: boolean;
+}
 function AccordionContent({
   className,
   children,
+  isSecondLast,
   ...props
-}: React.ComponentProps<typeof AccordionPrimitive.Content>) {
+}: AccordionContentProps) {
   return (
     <AccordionPrimitive.Content
       data-slot="accordion-content"
-      className="data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down overflow-hidden text-sm mt-3 text-left text-[12px] md:text-[16px] lg:text-[18px] font-normal leading-4.5 md:leading-6 lg:leading-7"
+      className={cn(
+        "data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down overflow-hidden text-sm mt-3 text-left text-[12px] md:text-[16px] lg:text-[18px] font-normal leading-4.5 md:leading-6 lg:leading-7",
+        isSecondLast ? "pb-0" : "pb-4",
+        className,
+      )}
       {...props}
     >
-      <div className={cn("pt-0 pb-4", className)}>{children}</div>
+      <div className="pb-0">{children}</div>
     </AccordionPrimitive.Content>
   );
 }
